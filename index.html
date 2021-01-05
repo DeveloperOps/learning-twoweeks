@@ -8,7 +8,10 @@
 <body>
   <div id="heading">
     <h1>{{ heading ? heading : "Nothing to show here!!" }}</h1>
-    <input type="text" v-model="newItems" placeholder="Add items">
+    <div id="form add-items">
+      <input type="text" v-model="newItems" placeholder="Add items" v-on:keyup.enter="items.push(newItems)">
+      <button v-on:click="items.push(newItems)">Add Items</button>
+    </div>
     <ul>
       <li v-for="item in items">{{ item }}</li>
     </ul>
