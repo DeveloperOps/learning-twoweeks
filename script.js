@@ -1,23 +1,13 @@
-new Vue({
-  el: '#heading',
-  data: {
-    state: 'default',
-    heading: "My list",
-    items: [],
-    newItems: ''
-  },
-  methods: {
-    saveItems: function() {
-      this.items.push(this.newItems);
-      this.newItems = '';
-    },
-    changeState: function(newState) {
-      this.state = newState;
-    }
-  },
-  computed: {
-    charecterCount() {
-      return this.newItems.length;
+//first arg - component name 
+//second arg - component options
+Vue.component('count-button' , {
+  template: '<button @click="count++">{{count}}</button>',
+  data () {
+    return {
+      count: 0
     }
   }
+});
+new Vue({
+  el: '#components',
 });
