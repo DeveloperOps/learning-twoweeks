@@ -7,7 +7,7 @@
 </head>
 <body>
   <div id="heading">
-    <h1>{{ heading }}</h1>
+    <h1>{{ heading ? heading : "Nothing to show here!!" }}</h1>
     <input type="text" v-model="heading"/>
   </div>
   <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
