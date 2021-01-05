@@ -8,5 +8,11 @@ new Vue({
       "That how to render values on screen"
     ],
     newItems: ''
+  },
+  methods: {
+    saveItems: function() {
+      this.items.push(this.newItems);
+      this.newItems = '';
+    }
   }
 });
