@@ -8,6 +8,13 @@ Vue.component('count-button' , {
     }
   }
 });
+
+
+Vue.component('plan' , {
+  template: '#plans-template',
+  props: ['name']
+})
+
 new Vue({
   el: '#components',
 });
