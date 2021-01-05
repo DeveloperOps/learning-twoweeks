@@ -8,10 +8,15 @@
 <body>
   <div id="heading">
     <h1>{{ heading ? heading : "Nothing to show here!!" }}</h1>
-    <div id="form add-items">
+    <div>
+      <button @click="changeState('edit')">Add items</button>
+       <button @click="changeState('default')">Cancel</button>
+    </div>
+    <div v-if="state === 'edit'">
       <input type="text" v-model="newItems" placeholder="Add items" @keyup.enter="saveItems">
       <button @click="saveItems">Add Items</button>
     </div>
+    <p v-if="items.length === 0">No Items to show!!</p>
     <ul>
       <li v-for="item in items">{{ item }}</li>
     </ul>

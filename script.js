@@ -1,18 +1,18 @@
 new Vue({
   el: '#heading',
   data: {
+    state: 'default',
     heading: "My list",
-    items: [
-      "Day 1 of vue js",
-      "I'm working with loops in vue",
-      "That how to render values on screen"
-    ],
+    items: [],
     newItems: ''
   },
   methods: {
     saveItems: function() {
       this.items.push(this.newItems);
       this.newItems = '';
+    },
+    changeState: function(newState) {
+      this.state = newState;
     }
   }
 });
