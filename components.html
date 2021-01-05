@@ -8,9 +8,7 @@
 </head>
 <body>
   <div id="components">
-    <plan name="My plan 1"></plan>
-    <plan name="My plan 2"></plan>
-    <plan name="My plan 3"></plan>
+    <plan v-for="plan in plans" :name="plan"></plan>
   </div>
   <script type="text/x-template" id="plans-template">
     <div class="plan">

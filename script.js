@@ -9,12 +9,19 @@ Vue.component('count-button' , {
   }
 });
 
-
 Vue.component('plan' , {
   template: '#plans-template',
-  props: ['name']
+  props: {
+    name: {
+      type: String,
+      required: true
+    }
+  }
 })
 
 new Vue({
   el: '#components',
+  data: {
+    plans: ["The single" , "Something new" , "code is good"]
+  }
 });
