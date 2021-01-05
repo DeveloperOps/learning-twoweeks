@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vue js</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
   <div id="heading">
@@ -12,8 +13,9 @@
       <button @click="changeState('edit')">Add items</button>
        <button @click="changeState('default')">Cancel</button>
     </div>
-    <div v-if="state === 'edit'">
+    <div class="form-flex" v-if="state === 'edit'">
       <input type="text" v-model="newItems" placeholder="Add items" @keyup.enter="saveItems">
+      <p> {{charecterCount}} / 200 </p>
       <button @click="saveItems">Add Items</button>
     </div>
     <a v-bind:href="newItems" target="_default">Dynamic link</a>

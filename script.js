@@ -14,5 +14,10 @@ new Vue({
     changeState: function(newState) {
       this.state = newState;
     }
+  },
+  computed: {
+    charecterCount() {
+      return this.newItems.length;
+    }
   }
 });
