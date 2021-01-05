@@ -1,7 +1,7 @@
 //first arg - component name 
 //second arg - component options
 Vue.component('count-button' , {
-  template: '<button @click="count++">{{count}}</button>',
+  template: '#click-counter-template',
   data () {
     return {
       count: 0

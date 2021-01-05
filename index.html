@@ -10,6 +10,9 @@
   <div id="components">
    <count-button/>
   </div>
+  <script type="text/x-template" id="click-counter-template">
+    <button @click="count++">{{count}}</button>
+  </script>
   <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
   <script src="./script.js"></script>
 </body>
